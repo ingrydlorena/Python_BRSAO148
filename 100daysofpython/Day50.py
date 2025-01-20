@@ -6,9 +6,11 @@ class Node:
     def __init__(self,data):
         self.data = data #Store data
         self.next = None # Pointer to the next node
+
 class Linkedlist:
     def __init__(self):
         self.head = None # create an empty list
+        
     def add(self,data):
         new_node = Node(data)
         if not self.head:
@@ -18,6 +20,7 @@ class Linkedlist:
             while last.next: # Traverse to the last node
                 last = last.next
             last.next = new_node # Link the new node
+
     def remove(self,key):
         current = self.head
 
